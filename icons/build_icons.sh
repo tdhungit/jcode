@@ -38,7 +38,7 @@ VSCODE_PREFIX=""
 
 build_darwin_main() { # {{{
   if [[ ! -f "${SRC_PREFIX}src/${QUALITY}/resources/darwin/code.icns" ]]; then
-    rsvg-convert -w 655 -h 655 "icons/${QUALITY}/codium_cnl.svg" -o "code_logo.png"
+    rsvg-convert -w 655 -h 655 "icons/${QUALITY}/jcode.svg" -o "code_logo.png"
     composite "code_logo.png" -gravity center "icons/template_macos.png" "code_1024.png"
     convert "code_1024.png" -resize 512x512 code_512.png
     convert "code_1024.png" -resize 256x256 code_256.png
@@ -51,7 +51,7 @@ build_darwin_main() { # {{{
 } # }}}
 
 build_darwin_types() { # {{{
-  rsvg-convert -w 128 -h 128 "icons/${QUALITY}/codium_cnl_w80_b8.svg" -o "code_logo.png"
+  rsvg-convert -w 128 -h 128 "icons/${QUALITY}/jcode.svg" -o "code_logo.png"
 
   for file in "${VSCODE_PREFIX}"vscode/resources/darwin/*; do
     if [[ -f "${file}" ]]; then
@@ -77,7 +77,7 @@ build_darwin_types() { # {{{
 
 build_linux_main() { # {{{
   if [[ ! -f "${SRC_PREFIX}src/${QUALITY}/resources/linux/code.png" ]]; then
-    wget "https://raw.githubusercontent.com/VSCodium/icons/main/icons/linux/circle1/${COLOR}/paulo22s.png" -O "${SRC_PREFIX}src/${QUALITY}/resources/linux/code.png"
+  wget "https://raw.githubusercontent.com/tdhungit/jcode/main/icons/linux/circle1/${COLOR}/paulo22s.png" -O "${SRC_PREFIX}src/${QUALITY}/resources/linux/code.png"
   fi
 
   mkdir -p "${SRC_PREFIX}src/${QUALITY}/resources/linux/rpm"
@@ -96,7 +96,7 @@ build_media() { # {{{
 
 build_server() { # {{{
   if [[ ! -f "${SRC_PREFIX}src/${QUALITY}/resources/server/favicon.ico" ]]; then
-    wget "https://raw.githubusercontent.com/VSCodium/icons/main/icons/win32/nobg/${COLOR}/paulo22s.ico" -O "${SRC_PREFIX}src/${QUALITY}/resources/server/favicon.ico"
+  wget "https://raw.githubusercontent.com/tdhungit/jcode/main/icons/win32/nobg/${COLOR}/paulo22s.ico" -O "${SRC_PREFIX}src/${QUALITY}/resources/server/favicon.ico"
   fi
 
   if [[ ! -f "${SRC_PREFIX}src/${QUALITY}/resources/server/code-192.png" ]]; then
@@ -110,7 +110,7 @@ build_server() { # {{{
 
 build_windows_main() { # {{{
   if [[ ! -f "${SRC_PREFIX}src/${QUALITY}/resources/win32/code.ico" ]]; then
-    wget "https://raw.githubusercontent.com/VSCodium/icons/main/icons/win32/nobg/${COLOR}/paulo22s.ico" -O "${SRC_PREFIX}src/${QUALITY}/resources/win32/code.ico"
+  wget "https://raw.githubusercontent.com/tdhungit/jcode/main/icons/win32/nobg/${COLOR}/paulo22s.ico" -O "${SRC_PREFIX}src/${QUALITY}/resources/win32/code.ico"
   fi
 } # }}}
 

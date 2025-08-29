@@ -130,72 +130,80 @@ setpath "product" "reportIssueUrl" "https://github.com/VSCodium/vscodium/issues/
 setpath "product" "requestFeatureUrl" "https://go.microsoft.com/fwlink/?LinkID=533482"
 setpath "product" "tipsAndTricksUrl" "https://go.microsoft.com/fwlink/?linkid=852118"
 setpath "product" "twitterUrl" "https://go.microsoft.com/fwlink/?LinkID=533687"
+setpath "product" "documentationUrl" "https://github.com/tdhungit/jcode#readme"
+setpath "product" "licenseUrl" "https://github.com/tdhungit/jcode/blob/main/LICENSE"
+setpath_json "product" "linkProtectionTrustedDomains" '["https://open-vsx.org"]'
+setpath "product" "releaseNotesUrl" "https://github.com/tdhungit/jcode/releases"
+setpath "product" "reportIssueUrl" "https://github.com/tdhungit/jcode/issues/new"
+setpath "product" "requestFeatureUrl" "https://github.com/tdhungit/jcode/issues/new?labels=enhancement"
+setpath "product" "tipsAndTricksUrl" "https://github.com/tdhungit/jcode#tips-and-tricks"
+setpath "product" "twitterUrl" "https://github.com/tdhungit/jcode"
 
 if [[ "${DISABLE_UPDATE}" != "yes" ]]; then
   setpath "product" "updateUrl" "https://raw.githubusercontent.com/VSCodium/versions/refs/heads/master"
 
   if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
-    setpath "product" "downloadUrl" "https://github.com/VSCodium/vscodium-insiders/releases"
+  setpath "product" "downloadUrl" "https://github.com/tdhungit/jcode/releases"
   else
     setpath "product" "downloadUrl" "https://github.com/VSCodium/vscodium/releases"
   fi
 fi
 
 if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
-  setpath "product" "nameShort" "VSCodium - Insiders"
-  setpath "product" "nameLong" "VSCodium - Insiders"
-  setpath "product" "applicationName" "codium-insiders"
-  setpath "product" "dataFolderName" ".vscodium-insiders"
-  setpath "product" "linuxIconName" "vscodium-insiders"
+  setpath "product" "nameShort" "JCode - Insiders"
+  setpath "product" "nameLong" "JCode - Insiders"
+  setpath "product" "applicationName" "jcode-insiders"
+  setpath "product" "dataFolderName" ".jcode-insiders"
+  setpath "product" "linuxIconName" "jcode-insiders"
   setpath "product" "quality" "insider"
-  setpath "product" "urlProtocol" "vscodium-insiders"
-  setpath "product" "serverApplicationName" "codium-server-insiders"
-  setpath "product" "serverDataFolderName" ".vscodium-server-insiders"
-  setpath "product" "darwinBundleIdentifier" "com.vscodium.VSCodiumInsiders"
-  setpath "product" "win32AppUserModelId" "VSCodium.VSCodiumInsiders"
-  setpath "product" "win32DirName" "VSCodium Insiders"
-  setpath "product" "win32MutexName" "vscodiuminsiders"
-  setpath "product" "win32NameVersion" "VSCodium Insiders"
-  setpath "product" "win32RegValueName" "VSCodiumInsiders"
-  setpath "product" "win32ShellNameShort" "VSCodium Insiders"
-  setpath "product" "win32AppId" "{{EF35BB36-FA7E-4BB9-B7DA-D1E09F2DA9C9}"
-  setpath "product" "win32x64AppId" "{{B2E0DDB2-120E-4D34-9F7E-8C688FF839A2}"
-  setpath "product" "win32arm64AppId" "{{44721278-64C6-4513-BC45-D48E07830599}"
-  setpath "product" "win32UserAppId" "{{ED2E5618-3E7E-4888-BF3C-A6CCC84F586F}"
-  setpath "product" "win32x64UserAppId" "{{20F79D0D-A9AC-4220-9A81-CE675FFB6B41}"
-  setpath "product" "win32arm64UserAppId" "{{2E362F92-14EA-455A-9ABD-3E656BBBFE71}"
-  setpath "product" "tunnelApplicationName" "codium-tunnel-insiders"
-  setpath "product" "win32TunnelServiceMutex" "vscodiuminsiders-tunnelservice"
-  setpath "product" "win32TunnelMutex" "vscodiuminsiders-tunnel"
-  setpath "product" "win32ContextMenu.x64.clsid" "90AAD229-85FD-43A3-B82D-8598A88829CF"
-  setpath "product" "win32ContextMenu.arm64.clsid" "7544C31C-BDBF-4DDF-B15E-F73A46D6723D"
+  setpath "product" "urlProtocol" "jcode-insiders"
+  setpath "product" "serverApplicationName" "jcode-server-insiders"
+  setpath "product" "serverDataFolderName" ".jcode-server-insiders"
+  setpath "product" "darwinBundleIdentifier" "com.tdhungit.JCodeInsiders"
+  setpath "product" "win32AppUserModelId" "JCode.JCodeInsiders"
+  setpath "product" "win32DirName" "JCode Insiders"
+  setpath "product" "win32MutexName" "jcodeinsiders"
+  setpath "product" "win32NameVersion" "JCode Insiders"
+  setpath "product" "win32RegValueName" "JCodeInsiders"
+  setpath "product" "win32ShellNameShort" "JCode Insiders"
+  setpath "product" "win32AppId" "{253467AB-3901-4B72-B7B0-E25B9D7FA8D2}"
+  setpath "product" "win32x64AppId" "{BD1B9A8B-5736-4EF4-A664-D268DAF43C5F}"
+  setpath "product" "win32arm64AppId" "{35C57A7A-EC97-47E7-B696-A059F93C6105}"
+  setpath "product" "win32UserAppId" "{ADF25A89-6B34-4207-93F8-0B64868D06F6}"
+  setpath "product" "win32x64UserAppId" "{71C6B2B0-5878-458C-9217-6C2F043EB340}"
+  setpath "product" "win32arm64UserAppId" "{D5780BA6-56D4-41A9-846D-2D9CA972A67E}"
+  setpath "product" "tunnelApplicationName" "jcode-tunnel-insiders"
+  setpath "product" "win32TunnelServiceMutex" "jcodeinsiders-tunnelservice"
+  setpath "product" "win32TunnelMutex" "jcodeinsiders-tunnel"
+  setpath "product" "win32ContextMenu.x64.clsid" "091C70B0-287D-4D40-AD6C-44784D2ADED6"
+  setpath "product" "win32ContextMenu.arm64.clsid" "DF7C53A6-A97E-456D-8177-B0D052D311C6"
 else
-  setpath "product" "nameShort" "VSCodium"
-  setpath "product" "nameLong" "VSCodium"
-  setpath "product" "applicationName" "codium"
-  setpath "product" "linuxIconName" "vscodium"
+  setpath "product" "nameShort" "JCode"
+  setpath "product" "nameLong" "JCode"
+  setpath "product" "applicationName" "jcode"
+  setpath "product" "linuxIconName" "jcode"
   setpath "product" "quality" "stable"
-  setpath "product" "urlProtocol" "vscodium"
-  setpath "product" "serverApplicationName" "codium-server"
-  setpath "product" "serverDataFolderName" ".vscodium-server"
-  setpath "product" "darwinBundleIdentifier" "com.vscodium"
-  setpath "product" "win32AppUserModelId" "VSCodium.VSCodium"
-  setpath "product" "win32DirName" "VSCodium"
-  setpath "product" "win32MutexName" "vscodium"
-  setpath "product" "win32NameVersion" "VSCodium"
-  setpath "product" "win32RegValueName" "VSCodium"
-  setpath "product" "win32ShellNameShort" "VSCodium"
-  setpath "product" "win32AppId" "{{763CBF88-25C6-4B10-952F-326AE657F16B}"
-  setpath "product" "win32x64AppId" "{{88DA3577-054F-4CA1-8122-7D820494CFFB}"
-  setpath "product" "win32arm64AppId" "{{67DEE444-3D04-4258-B92A-BC1F0FF2CAE4}"
-  setpath "product" "win32UserAppId" "{{0FD05EB4-651E-4E78-A062-515204B47A3A}"
-  setpath "product" "win32x64UserAppId" "{{2E1F05D1-C245-4562-81EE-28188DB6FD17}"
-  setpath "product" "win32arm64UserAppId" "{{57FD70A5-1B8D-4875-9F40-C5553F094828}"
-  setpath "product" "tunnelApplicationName" "codium-tunnel"
-  setpath "product" "win32TunnelServiceMutex" "vscodium-tunnelservice"
-  setpath "product" "win32TunnelMutex" "vscodium-tunnel"
-  setpath "product" "win32ContextMenu.x64.clsid" "D910D5E6-B277-4F4A-BDC5-759A34EEE25D"
-  setpath "product" "win32ContextMenu.arm64.clsid" "4852FC55-4A84-4EA1-9C86-D53BE3DF83C0"
+  setpath "product" "urlProtocol" "jcode"
+  setpath "product" "serverApplicationName" "jcode-server"
+  setpath "product" "serverDataFolderName" ".jcode-server"
+  setpath "product" "darwinBundleIdentifier" "com.tdhungit.JCode"
+  setpath "product" "win32AppUserModelId" "JCode.JCode"
+  setpath "product" "win32DirName" "JCode"
+  setpath "product" "win32MutexName" "jcode"
+  setpath "product" "win32NameVersion" "JCode"
+  setpath "product" "win32RegValueName" "JCode"
+  setpath "product" "win32ShellNameShort" "JCode"
+  setpath "product" "win32AppId" "{5D9DF95B-6EC8-4CB6-BE8D-BF3B6E87DDCC}"
+  setpath "product" "win32x64AppId" "{69BB4156-9F1D-4DDA-96F1-D6A74B2746B5}"
+  setpath "product" "win32arm64AppId" "{C1031408-857C-483E-83F6-6E2C9E32EF90}"
+  setpath "product" "win32UserAppId" "{ADF25A89-6B34-4207-93F8-0B64868D06F6}"
+  setpath "product" "win32x64UserAppId" "{71C6B2B0-5878-458C-9217-6C2F043EB340}"
+  setpath "product" "win32arm64UserAppId" "{D5780BA6-56D4-41A9-846D-2D9CA972A67E}"
+  setpath "product" "tunnelApplicationName" "jcode-tunnel"
+  setpath "product" "win32TunnelServiceMutex" "jcode-tunnelservice"
+  setpath "product" "win32TunnelMutex" "jcode-tunnel"
+  setpath "product" "win32ContextMenu.x64.clsid" "F551BC22-A5D0-40A1-BAC8-1C5D952AFE12"
+  setpath "product" "win32ContextMenu.arm64.clsid" "56023381-63F2-4F38-97D6-84AD321E3D71"
 fi
 
 jsonTmp=$( jq -s '.[0] * .[1]' product.json ../product.json )
@@ -209,6 +217,7 @@ cp package.json{,.bak}
 setpath "package" "version" "${RELEASE_VERSION%-insider}"
 
 replace 's|Microsoft Corporation|VSCodium|' package.json
+replace 's|Microsoft Corporation|JCode Team|' package.json
 
 cp resources/server/manifest.json{,.bak}
 
@@ -219,6 +228,8 @@ else
   setpath "resources/server/manifest" "name" "VSCodium"
   setpath "resources/server/manifest" "short_name" "VSCodium"
 fi
+setpath "resources/server/manifest" "name" "JCode - Insiders"
+setpath "resources/server/manifest" "short_name" "JCode - Insiders"
 
 # announcements
 replace "s|\\[\\/\\* BUILTIN_ANNOUNCEMENTS \\*\\/\\]|$( tr -d '\n' < ../announcements-builtin.json )|" src/vs/workbench/contrib/welcomeGettingStarted/browser/gettingStarted.ts
@@ -229,6 +240,10 @@ replace 's|Microsoft Corporation|VSCodium|' build/lib/electron.js
 replace 's|Microsoft Corporation|VSCodium|' build/lib/electron.ts
 replace 's|([0-9]) Microsoft|\1 VSCodium|' build/lib/electron.js
 replace 's|([0-9]) Microsoft|\1 VSCodium|' build/lib/electron.ts
+replace 's|Microsoft Corporation|JCode Team|' build/lib/electron.js
+replace 's|Microsoft Corporation|JCode Team|' build/lib/electron.ts
+replace 's|([0-9]) Microsoft|\1 JCode Team|' build/lib/electron.js
+replace 's|([0-9]) Microsoft|\1 JCode Team|' build/lib/electron.ts
 
 if [[ "${OS_NAME}" == "linux" ]]; then
   # microsoft adds their apt repo to sources
@@ -247,12 +262,20 @@ if [[ "${OS_NAME}" == "linux" ]]; then
   sed -i 's|https://code.visualstudio.com/docs/setup/linux|https://github.com/VSCodium/vscodium#download-install|' resources/linux/code.appdata.xml
   sed -i 's|https://code.visualstudio.com/home/home-screenshot-linux-lg.png|https://vscodium.com/img/vscodium.png|' resources/linux/code.appdata.xml
   sed -i 's|https://code.visualstudio.com|https://vscodium.com|' resources/linux/code.appdata.xml
+  sed -i 's|Visual Studio Code|JCode|g' resources/linux/code.appdata.xml
+  sed -i 's|https://code.visualstudio.com/docs/setup/linux|https://github.com/tdhungit/jcode#download-install|' resources/linux/code.appdata.xml
+  sed -i 's|https://code.visualstudio.com/home/home-screenshot-linux-lg.png|https://github.com/tdhungit/jcode/raw/main/logo.png|' resources/linux/code.appdata.xml
+  sed -i 's|https://code.visualstudio.com|https://github.com/tdhungit/jcode|' resources/linux/code.appdata.xml
 
   # control.template
   sed -i 's|Microsoft Corporation <vscode-linux@microsoft.com>|VSCodium Team https://github.com/VSCodium/vscodium/graphs/contributors|'  resources/linux/debian/control.template
   sed -i 's|Visual Studio Code|VSCodium|g' resources/linux/debian/control.template
   sed -i 's|https://code.visualstudio.com/docs/setup/linux|https://github.com/VSCodium/vscodium#download-install|' resources/linux/debian/control.template
   sed -i 's|https://code.visualstudio.com|https://vscodium.com|' resources/linux/debian/control.template
+  sed -i 's|Microsoft Corporation <vscode-linux@microsoft.com>|JCode Team https://github.com/tdhungit/jcode/graphs/contributors|'  resources/linux/debian/control.template
+  sed -i 's|Visual Studio Code|JCode|g' resources/linux/debian/control.template
+  sed -i 's|https://code.visualstudio.com/docs/setup/linux|https://github.com/tdhungit/jcode#download-install|' resources/linux/debian/control.template
+  sed -i 's|https://code.visualstudio.com|https://github.com/tdhungit/jcode|' resources/linux/debian/control.template
 
   # code.spec.template
   sed -i 's|Microsoft Corporation|VSCodium Team|' resources/linux/rpm/code.spec.template
@@ -260,13 +283,21 @@ if [[ "${OS_NAME}" == "linux" ]]; then
   sed -i 's|Visual Studio Code|VSCodium|' resources/linux/rpm/code.spec.template
   sed -i 's|https://code.visualstudio.com/docs/setup/linux|https://github.com/VSCodium/vscodium#download-install|' resources/linux/rpm/code.spec.template
   sed -i 's|https://code.visualstudio.com|https://vscodium.com|' resources/linux/rpm/code.spec.template
+  sed -i 's|Microsoft Corporation|JCode Team|' resources/linux/rpm/code.spec.template
+  sed -i 's|Visual Studio Code Team <vscode-linux@microsoft.com>|JCode Team https://github.com/tdhungit/jcode/graphs/contributors|' resources/linux/rpm/code.spec.template
+  sed -i 's|Visual Studio Code|JCode|' resources/linux/rpm/code.spec.template
+  sed -i 's|https://code.visualstudio.com/docs/setup/linux|https://github.com/tdhungit/jcode#download-install|' resources/linux/rpm/code.spec.template
+  sed -i 's|https://code.visualstudio.com|https://github.com/tdhungit/jcode|' resources/linux/rpm/code.spec.template
 
   # snapcraft.yaml
   sed -i 's|Visual Studio Code|VSCodium|'  resources/linux/rpm/code.spec.template
+  sed -i 's|Visual Studio Code|JCode|'  resources/linux/rpm/code.spec.template
 elif [[ "${OS_NAME}" == "windows" ]]; then
   # code.iss
   sed -i 's|https://code.visualstudio.com|https://vscodium.com|' build/win32/code.iss
   sed -i 's|Microsoft Corporation|VSCodium|' build/win32/code.iss
+  sed -i 's|https://code.visualstudio.com|https://github.com/tdhungit/jcode|' build/win32/code.iss
+  sed -i 's|Microsoft Corporation|JCode Team|' build/win32/code.iss
 fi
 
 cd ..

@@ -26,9 +26,9 @@ on:
 
 env:
   ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
-  APP_NAME: VSCodium
+  APP_NAME: JCode
   ASSETS_REPOSITORY: ${{ github.repository }}
-  BINARY_NAME: codium
+  BINARY_NAME: jcode
   DISABLE_UPDATE: 'yes'
   GH_REPO_PATH: ${{ github.repository }}
   ORG_NAME: ${{ github.repository_owner }}
@@ -64,7 +64,7 @@ jobs:
           GENERATE_ASSETS: ${{ github.event.inputs.generate_assets }}
         run: ./check_cron_or_pr.sh
 
-      - name: Check existing VSCodium tags/releases
+      - name: Check existing JCode tags/releases
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CHECK_ALL: 'yes'
